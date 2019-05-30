@@ -5,15 +5,12 @@ or anything a computer can do. Like a sand castle.
 
 Example:
 
-  ``[to Basic]
-
-  #helloworld in Bucket:
-
-      bucket open:
-    
-          show 'Hello world!'
+      [to Basic]
+      #helloworld in Bucket:
+      bucket open:    
+      show 'Hello world!'
       end m.
-  close.``
+      close.
 
 You can just have one main file, but how may toys (imported scripts)
 you want.
@@ -34,5 +31,3 @@ floats. Bucket replaces the sit by the value after ``with`` keyword. Example:
 ``
 show 'int bol = [i]' with 3
 ``
-
-
