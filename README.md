@@ -44,3 +44,24 @@ In Bucket we have two types of classes: ``in Bucket:`` and ``in PLayground:``. T
       close.
       
  The main file imports the example task of toy class and call it after importing. 
+
+# Main method and tasks
+The main method, ``bucket open:``, are the only place where have execution. Tasks are just functions wich can get, or not, values and "die" after run, returning a value or not. Basicly Tasks are a extention of the single method.
+
+      bucket open:
+      call print to self.
+      
+      int number as 10
+      call other:number to number
+      end m.
+      
+      print task:
+      show 'Hello!'
+      end t.
+      
+      other task: num
+      make num + 1
+      return num
+      end t.
+
+Here the Main calls the task "print" and set as a no return mode, ``to self.``. Then calls the "other", giving the value of the variable number to return to itself. 
