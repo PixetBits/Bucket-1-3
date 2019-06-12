@@ -1,5 +1,5 @@
 # BucketProgrammingLanguage
-Bucket means Basic Unity Control to Kindle Eletrical Tapes. With bucket you can do simple scripts to read, edit, add, replace or anything a computer can do with user input. Like a sand castle.
+Bucket means Basic Unity-Control to Kindle Eletrical Tapes. With Bucket you can do simple scripts to read, edit, add, replace or anything a computer can do with user input. For example, a sand castle.
 
 # Hello world in Bucket:
 
@@ -26,7 +26,6 @@ In Bucket we have two types of classes: ``in Bucket:`` and ``in PLayground:``. T
       with #otherclss in Sandbox.
       
       bucket open:
-      
       call example to self.
       end m.
       
@@ -112,3 +111,16 @@ Example:
       show '[s]' with bout
       
       -- output: banana --
+      
+Lists have too many functions to work with data, but we come back later.
+
+### Data
+You can change the data type of an variable, you can add or remove values, the basic of data modification.
+
+``set`` : sets a new value to a variable.                                                                                           
+``make`` : multiplys, add or remove parts of an variable.                                                                           
+``rise`` : increases a numeric variable in an value.                                                                                
+``down`` : decreases a numeric variable in an value.
+
+``round``: turns a float to int.                                                                                                         
+``convert``: converts a variable to other data type, if it's possible.
