@@ -43,7 +43,7 @@ In Bucket we have two types of classes: ``in Bucket:`` and ``in PLayground:``. T
       
       close.
       
- The main file imports the example task of toy class and call it after importing. 
+ The main file imports the ``example task:`` of toy class and call it after importing. 
 
 # Main method and tasks
 The main method, ``bucket open:``, are the only place where have execution. Tasks are just functions wich can get, or not, values and "die" after run, returning a value or not. Basicly Tasks are a extention of the single method.
