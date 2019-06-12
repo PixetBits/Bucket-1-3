@@ -84,3 +84,31 @@ Example:
       -- Output: You writed "hello"! --
       
 The ``show`` function can use a "cit" ("citation"). Print some value together. [i] to replace by a int, [s] by a string, [b] bool and [f] float.
+
+### Variables
+In Bucket we have 4 types of data and lists of it. Integers, strings, booleans and floats.
+
+``int`` : declares a integer number. Negatives and positives.                                                                         
+``str`` : declares a string value. A text between simple apostrophe (').                                                            
+``bol`` : declates a binary value. Can be true (yes) or false (not).                                                                
+``flt`` : declates a float number. Every "broken" number, positive and negative, with a sufix (.f).                                 
+
+Example:
+
+      int num as 42
+      str bin as 'hello'
+      bol sys as yes
+      flt pii as 3.15.f
+
+Lists have a 5th type of data, "text". A text are a index of the list; every value you put can be a index. Ints, strings, whatever.
+
+You declares a list vith ``lst`` before the data type.
+
+Example:
+
+      lst str fruits as [0 : banana, 1 : aple, 2 : pineaple]
+      str bout as fruits 0
+      
+      show '[s]' with bout
+      
+      -- output: banana --
