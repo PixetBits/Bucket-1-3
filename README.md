@@ -66,4 +66,21 @@ The main method, ``bucket open:``, are the only place where have execution. Task
       return num
       end t.
 
-Here the Main calls the task "print" and set as a no return mode, ``to self.``. Then calls the "other", giving the value of the variable number to return to itself. 
+Here the Main calls the task "print" and set as a no return mode, ``to self.``. Then calls the "other", giving the value of the variable number to return to itself.
+
+## Bucket default functions
+Here we have the classic functions inported by the ``to Basic`` lib.
+
+### Input and Output
+``show`` : requires a string. Prints something in the terminal. "BIn".                                                                   
+``sand`` : can get a string. Return the user input. "BOut".
+
+Example:
+
+      str bin as sand with 'Your input: '
+      show 'You writed "[s]"!' with bin
+      
+      -- Input : hello --
+      -- Output: You writed "hello"! --
+      
+The ``show`` function can use a "cit" ("citation"). Print some value together. [i] to replace by a int, [s] by a string, [b] bool and [f] float.
