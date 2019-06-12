@@ -48,6 +48,7 @@ In Bucket we have two types of classes: ``in Bucket:`` and ``in PLayground:``. T
 # Main method and tasks
 The main method, ``bucket open:``, are the only place where have execution. Tasks are just functions wich can get, or not, values and "die" after run, returning a value or not. Basicly Tasks are a extention of the single method.
 
+      -- Main method --
       bucket open:
       call print to self.
       
@@ -55,6 +56,7 @@ The main method, ``bucket open:``, are the only place where have execution. Task
       call other:number to number
       end m.
       
+      -- Tasks --
       print task:
       show 'Hello!'
       end t.
