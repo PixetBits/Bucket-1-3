@@ -154,7 +154,7 @@ You can change the data type of an variable, you can add or remove values, etc.
       yes and not
       >>> not
       
-      not and yes
+      not and not
       >>> not
       
       yes or yes
