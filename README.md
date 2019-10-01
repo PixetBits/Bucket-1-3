@@ -178,4 +178,4 @@ You can change the data type of an variable, you can add or remove values, etc.
       --- yes or not ---
       >>> yes
       
-You can understand like this: ``(yes and yes) or (yes and not)``
+You can understand it like this: ``(yes and yes) or (yes and not)``
