@@ -73,15 +73,17 @@ Here we have the classic functions inported by the ``to Basic`` lib.
 
 ### Output
 ``show: `` : requires a string. Prints something in the terminal.                                                                       
-You can give arguments to ``show:`` function, example:                                                                                   
-``show: 'value: [0] + [1] = [2]' with 2, 3, 5``                                                                                         
-``>>> value: 2 + 3 = 5``
+You can give arguments to ``show:`` function, example: 
+
+      show: 'value: [0] + [1] = [2]' with 2, 3, 5
+      >>> value: 2 + 3 = 5
 
 ### Input
 ``sand`` : return the user input.                                                                                                       
-You can give arguments to ``sand:`` function, example:                                                                                   
-``sand: with 'your value: '``                                                                                                           
-``<<< value: ``
+You can give arguments to ``sand:`` function, example:
+
+      sand: with 'your value: '                                                                                                         
+      <<< value: 
 
 ### Variables
 
