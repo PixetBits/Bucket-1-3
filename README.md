@@ -100,19 +100,19 @@ The list index are a 4th type of data, "text". This means you have no to convert
 You can change the data type of an variable, you can add or remove values, etc.
 
 ``set [name] to [value]`` : sets a new value to a variable.                                                                             
-* ``[name]`` : variable name. ``[value]`` : other variable or value.
+``[name]`` : variable name. ``[value]`` : other variable or value.
 
 ``make: [name] [operator] [value]`` : multiplys, add or remove parts of an variable.                                                     
-* ``[name]`` : variable name. ``[operator]`` : math operation to do. ``[value]`` : other variable or value.
+``[name]`` : variable name. ``[operator]`` : math operation to do. ``[value]`` : other variable or value.
 
 ``rise: [name]`` : increases a numeric variable in an value by 1.                                                                       
-* ``[name]`` : variable name.
+``[name]`` : variable name.
 
 ``down: [name]`` : decreases a numeric variable in an value by 1.                                                                       
-* ``[name]`` : variable name.
+``[name]`` : variable name.
 
 ``round [name]``: rounds a number value.                                                                                                 
-* ``[name]`` : variable name.
+``[name]`` : variable name.
 
 ``convert [name] to [type]``: converts a variable to other data type, if it's possible.                                                 
-* ``[name]`` : variable name. ``[type]`` : the new variable type, the same of keywords.
+``[name]`` : variable name. ``[type]`` : the new variable type, the same of keywords.
