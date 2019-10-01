@@ -68,6 +68,12 @@ Here the Main calls the task ``print`` in no return mode, with ``to self.`` keyw
 
 # API Reference
 
+## Comment
+Anything between '--' is removed from the script, example:                                                                               
+
+      show: 'the comentary will -- not -- desappear' -- look!--
+      >>> the comentary will desappear
+
 ## Bucket default functions
 Here we have the classic functions inported by the ``to Basic`` lib.
 
