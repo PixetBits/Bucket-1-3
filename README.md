@@ -68,19 +68,21 @@ The main method, ``bucket open:``, are the only place where have execution. Task
 
 Here the Main calls the task ``print`` in no return mode, with ``to self.`` keyword. Then calls ``other``, giving the value of the variable ``number``, and return to itself.
 
+# API Reference
+
 ## Bucket default functions
 Here we have the classic functions inported by the ``to Basic`` lib.
 
 ### Output
-``show: `` : requires a string. Prints something in the terminal.
-You can give arguments to ``show:`` function, example:
-``show: 'value: [0] + [1] = [2]' with 2, 3, 5``
+``show: `` : requires a string. Prints something in the terminal.                                                                       
+You can give arguments to ``show:`` function, example:                                                                                   
+``show: 'value: [0] + [1] = [2]' with 2, 3, 5``                                                                                         
 ``>>> value: 2 + 3 = 5``
 
 ### Input
-``sand`` : return the user input.
-You can give arguments to ``sand:`` function, example:
-``sand: with 'your value: '``
+``sand`` : return the user input.                                                                                                       
+You can give arguments to ``sand:`` function, example:                                                                                   
+``sand: with 'your value: '``                                                                                                           
 ``<<< value: ``
 
 ### Variables
@@ -89,7 +91,7 @@ You can give arguments to ``sand:`` function, example:
 ``str`` : declares a string value. A text between simple apostrophe (').                                                            
 ``bol`` : declates a binary value. Can be true (yes) or false (not).                                                                     
 
-You can turn a variable into a list with the keyword ``lst`` before the data type keyword, example.
+You can turn a variable into a list with the keyword ``lst`` before the data type keyword, example.                                     
 ``lst str as [0 : 'a', 1 : 'b', 2 : 'c']``
 
 The list index are a 5th type of data, "text". This means you have no to convert variables to use as index. '0' is the same of 0, for example.
@@ -97,20 +99,20 @@ The list index are a 5th type of data, "text". This means you have no to convert
 ### Data manangement
 You can change the data type of an variable, you can add or remove values, etc.
 
-``set [name] to [value]`` : sets a new value to a variable.
+``set [name] to [value]`` : sets a new value to a variable.                                                                             
 * ``[name]`` : variable name. ``[value]`` : other variable or value.
 
-``make: [name] [operator] [value]`` : multiplys, add or remove parts of an variable.   
+``make: [name] [operator] [value]`` : multiplys, add or remove parts of an variable.                                                     
 * ``[name]`` : variable name. ``[operator]`` : math operation to do. ``[value]`` : other variable or value.
 
-``rise: [name]`` : increases a numeric variable in an value by 1.
+``rise: [name]`` : increases a numeric variable in an value by 1.                                                                       
 * ``[name]`` : variable name.
 
-``down: [name]`` : decreases a numeric variable in an value by 1.
+``down: [name]`` : decreases a numeric variable in an value by 1.                                                                       
 * ``[name]`` : variable name.
 
-``round [name]``: rounds a number value.  
+``round [name]``: rounds a number value.                                                                                                 
 * ``[name]`` : variable name.
 
-``convert [name] to [type]``: converts a variable to other data type, if it's possible.
+``convert [name] to [type]``: converts a variable to other data type, if it's possible.                                                 
 * ``[name]`` : variable name. ``[type]`` : the new variable type, the same of keywords.
