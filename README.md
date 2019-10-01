@@ -82,8 +82,8 @@ You can give arguments to ``show:`` function, example:
 ``sand`` : return the user input.                                                                                                       
 You can give arguments to ``sand:`` function, example:
 
-      sand: with 'your value: '                                                                                                         
-      <<< value: 
+      sand: with 'your value: '
+      <<< value:
 
 ### Variables
 
