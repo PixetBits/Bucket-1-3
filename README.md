@@ -166,7 +166,7 @@ You can change the data type of an variable, you can add or remove values, etc.
       not or not
       >>> not
       
-And have a greater priority, so it's replaced by decayed value first. Example:
+``and`` have a greater priority than ``or``, so it's replaced by decayed value first. Example:
 
       yes and yes or yes and not
       --- yes or not ---
