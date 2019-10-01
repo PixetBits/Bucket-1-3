@@ -94,7 +94,7 @@ You can give arguments to ``sand:`` function, example:
 You can turn a variable into a list with the keyword ``lst`` before the data type keyword, example.                                     
 ``lst str as [0 : 'a', 1 : 'b', 2 : 'c']``
 
-The list index are a 5th type of data, "text". This means you have no to convert variables to use as index. '0' is the same of 0, for example.
+The list index are a 4th type of data, "text". This means you have no to convert variables to use as index. '0' is the same of 0, for example.
 
 ### Data manangement
 You can change the data type of an variable, you can add or remove values, etc.
