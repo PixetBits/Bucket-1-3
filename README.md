@@ -103,7 +103,7 @@ You can change the data type of an variable, you can add or remove values, etc.
 ``[name]`` : variable name. ``[value]`` : other variable or value.
 
 ``make: [name] [operator] [value]`` : makes a math operation (+, -, *, /, %, ^).                                                   
-``[name]`` : variable name. ``[operator]`` : math operation to do. ``[value]`` : other variable or value.
+``[name]`` : variable name. ``[operator]`` : math operation to do. ``[value]`` : other variable or value.                               
 ``+`` : add. ``-`` subtract. ``*`` : multyply. ``/`` : divide. ``%`` : rest of division. ``^`` : power.
 
 ``rise: [name]`` : increases a numeric variable in an value by 1.                                                                       
