@@ -1,13 +1,14 @@
 # BucketProgrammingLanguage
+Bucket is a esoteric programing language inspired in ZOMBIE, python, lua and C#. Bucket are hight level, iperative, and terminal-oriented.
 Bucket means Basic Unity-Control to Kindle Eletrical Tapes. With Bucket you can do simple scripts to read, edit, add, replace or anything a computer can do with user input. For example, a sand castle.
 
 # Hello world in Bucket:
 
       [to Basic]
       #helloworld in Bucket:
-      
+ 
       bucket open:
-      show 'Hello world!'
+      show: 'Hello world!'
       end m.
       
       close.
@@ -36,13 +37,13 @@ In Bucket we have two types of classes: ``in Bucket:`` and ``in PLayground:``. T
       [to Basic]
       #otherclss in Playground:
       
-      example task:
-      show 'something'
+      void example task:
+      show: 'something'
       end t.
       
       close.
       
- The main file imports the ``example task:`` of toy class and call it after importing. 
+ The main file imports the ``example`` task from ``toy`` class and call it after importing. 
 
 # Main method and tasks
 The main method, ``bucket open:``, are the only place where have execution. Tasks are just functions wich can get, or not, values and "die" after run, returning a value or not. Basicly Tasks are a extention of the single method.
@@ -51,76 +52,65 @@ The main method, ``bucket open:``, are the only place where have execution. Task
       bucket open:
       call print to self.
       
-      int number as 10
+      num number as 10
       call other:number to number
       end m.
       
       -- Tasks --
-      print task:
+      void print task:
       show 'Hello!'
       end t.
       
-      other task: num
+      num other task:num
       make num + 1
       return num
       end t.
 
-Here the Main calls the task "print" and set as a no return mode, ``to self.``. Then calls the "other", giving the value of the variable number to return to itself.
+Here the Main calls the task ``print`` in no return mode, with ``to self.`` keyword. Then calls ``other``, giving the value of the variable ``number``, and return to itself.
 
 ## Bucket default functions
 Here we have the classic functions inported by the ``to Basic`` lib.
 
-### Input and Output
-``show`` : requires a string. Prints something in the terminal. "BIn".                                                                   
-``sand`` : can get a string. Return the user input. "BOut".
+### Output
+``show: `` : requires a string. Prints something in the terminal.
+You can give arguments to ``show:`` function, example:
+``show: 'value: [0] + [1] = [2]' with 2, 3, 5``
+``>>> value: 2 + 3 = 5``
 
-Example:
-
-      str bin as sand with 'Your input: '
-      show 'You writed "[s]"!' with bin
-      
-      -- Input : hello --
-      -- Output: You writed "hello"! --
-      
-The ``show`` function can use a "cit" ("citation"). Print some value together. [i] to replace by a int, [s] by a string, [b] bool and [f] float.
+### Input
+``sand`` : return the user input.
+You can give arguments to ``sand:`` function, example:
+``sand: with 'your value: '``
+``<<< value: ``
 
 ### Variables
-In Bucket we have 4 types of data and lists of it. Integers, strings, booleans and floats.
 
-``int`` : declares a integer number. Negatives and positives.                                                                         
+``num`` : declares a number. Negatives and positives, integers or floats.                                                               
 ``str`` : declares a string value. A text between simple apostrophe (').                                                            
-``bol`` : declates a binary value. Can be true (yes) or false (not).                                                                
-``flt`` : declates a float number. Every "broken" number, positive and negative, with a sufix (.f).                                 
+``bol`` : declates a binary value. Can be true (yes) or false (not).                                                                     
 
-Example:
+You can turn a variable into a list with the keyword ``lst`` before the data type keyword, example.
+``lst str as [0 : 'a', 1 : 'b', 2 : 'c']``
 
-      int num as 42
-      str bin as 'hello'
-      bol sys as yes
-      flt pii as 3.15.f
+The list index are a 5th type of data, "text". This means you have no to convert variables to use as index. '0' is the same of 0, for example.
 
-Lists have a 5th type of data, "text". A text are a index of the list; every value you put can be a index. Ints, strings, whatever.
+### Data manangement
+You can change the data type of an variable, you can add or remove values, etc.
 
-You declares a list vith ``lst`` before the data type.
+``set [name] to [value]`` : sets a new value to a variable.
+* ``[name]`` : variable name. ``[value]`` : other variable or value.
 
-Example:
+``make: [name] [operator] [value]`` : multiplys, add or remove parts of an variable.   
+* ``[name]`` : variable name. ``[operator]`` : math operation to do. ``[value]`` : other variable or value.
 
-      lst str fruits as [0 : banana, 1 : aple, 2 : pineaple]
-      str bout as fruits 0
-      
-      show '[s]' with bout
-      
-      -- output: banana --
-      
-Lists have too many functions to work with data, but we come back later.
+``rise: [name]`` : increases a numeric variable in an value by 1.
+* ``[name]`` : variable name.
 
-### Data
-You can change the data type of an variable, you can add or remove values, the basic of data modification.
+``down: [name]`` : decreases a numeric variable in an value by 1.
+* ``[name]`` : variable name.
 
-``set`` : sets a new value to a variable.                                                                                           
-``make`` : multiplys, add or remove parts of an variable.                                                                           
-``rise`` : increases a numeric variable in an value.                                                                                
-``down`` : decreases a numeric variable in an value.
+``round [name]``: rounds a number value.  
+* ``[name]`` : variable name.
 
-``round``: turns a float to int.                                                                                                         
-``convert``: converts a variable to other data type, if it's possible.
+``convert [name] to [type]``: converts a variable to other data type, if it's possible.
+* ``[name]`` : variable name. ``[type]`` : the new variable type, the same of keywords.
