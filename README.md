@@ -13,8 +13,6 @@ The name "Bucket" means Basic Unity-Control to Kindle Eletrical Tapes. With Buck
       
       close.
 
-This script imports the Basic library, declares a class named by the file name (helloworld.bk), and shows a string on the main method, ``bucket open:``.
-
 # Declare classes:
 
 In Bucket we have two types of classes: ``in Bucket:`` and ``in PLayground:``. The ``in Bucket:`` class is the main file, and the ``in PLayground:`` are called as "Toy", a class wich can be imported by the main file.
