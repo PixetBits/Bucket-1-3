@@ -117,3 +117,59 @@ You can change the data type of an variable, you can add or remove values, etc.
 
 ``convert [name] to [type]``: converts a variable to other data type, if it's possible.                                                 
 ``[name]`` : variable name. ``[type]`` : the new variable type, the same of keywords.
+
+### Logic door
+``if`` run the lines bellow if the statlement is true. If block structure:                                                               
+      
+      if yes do:
+      
+      -- Something --
+      end.
+      
+``even`` it's called if the last logic block evalues to false. Run the lines bellow if the statlement is true. Even block structure:     
+
+      if not do:
+      end.
+      
+      even yes do:
+      
+      -- Something --
+      end.
+  
+  ``else`` it's called if the last logic block evalues to false. Else block structure:
+  
+      if not do:
+      end.
+      
+      else:
+      
+      -- Something --
+      end.
+      
+  ## Logic Decay
+  
+      yes and yes
+      >>> yes
+      
+      yes and not
+      >>> not
+      
+      not and yes
+      >>> not
+      
+      yes or yes
+      >>> yes
+      
+      yes or not
+      >>> yes
+      
+      not or not
+      >>> not
+      
+And have a greater priority, so it's replaced by decayed value first. Example:
+
+      yes and yes or yes and not
+      --- yes or not ---
+      >>> yes
+      
+You can understand like this: ``(yes and yes) or (yes and not)``
