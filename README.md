@@ -71,7 +71,7 @@ Here the Main calls the task ``print`` in no return mode, with ``to self.`` keyw
 ## Comment
 Anything between ``--`` is removed from the script, example:                                                                               
 
-      show: 'the comentary will -- not -- desappear' -- look!--
+      show: 'the comentary will -- not -- desappear' --look!--
       >>> the comentary will desappear
 
 ## Bucket default functions
