@@ -102,7 +102,7 @@ You can change the data type of an variable, you can add or remove values, etc.
 ``set [name] to [value]`` : sets a new value to a variable.                                                                             
 ``[name]`` : variable name. ``[value]`` : other variable or value.
 
-``make: [name] [operator] [value]`` : multiplys, add or remove parts of an variable.                                                     
+``make: [name] [operator] [value]`` : multiplies, add or remove parts of an variable.                                                   
 ``[name]`` : variable name. ``[operator]`` : math operation to do. ``[value]`` : other variable or value.
 
 ``rise: [name]`` : increases a numeric variable in an value by 1.                                                                       
