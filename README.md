@@ -55,7 +55,7 @@ The main method, ``bucket open:``, are the only place where have execution. Task
       end m.
       
       -- Tasks --
-      void print task:
+      print task:
       show 'Hello!'
       end t.
       
