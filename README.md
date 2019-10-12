@@ -35,7 +35,7 @@ In Bucket we have two types of classes: ``in Bucket:`` and ``in PLayground:``. T
       [to Basic]
       #otherclss in Playground:
       
-      void example task:
+      example task:
       show: 'something'
       end t.
       
