@@ -125,14 +125,14 @@ You can change the data type of an variable, you can add or remove values, etc.
 ``[name]`` : variable name. ``[type]`` : the new variable type, the same of keywords.
 
 ### Logic door
-``if`` run the lines bellow if the statlement is true. If block structure:                                                               
+``if`` run the lines bellow if the statlement is true. ``if`` block structure:                                                           
       
       if yes do:
       
       -- Something --
       end.
       
-``even`` it's called if the last logic block evalues to false. Run the lines bellow if the statlement is true. Even block structure:     
+``even`` it's called if the last logic block evalues to false. Run the lines bellow if the statlement is true. ``even`` block structure: 
 
       if not do:
       end.
@@ -142,7 +142,7 @@ You can change the data type of an variable, you can add or remove values, etc.
       -- Something --
       end.
   
-  ``else`` it's called if the last logic block evalues to false. Else block structure:
+  ``else`` it's called if the last logic block evalues to false. ``else`` block structure:
   
       if not do:
       end.
