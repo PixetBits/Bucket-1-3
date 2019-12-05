@@ -112,7 +112,7 @@ if arg[1] ~= nil then
 -- File name --
 else
 
-    -- Copyright (c) --
+-- Copyright (c) --
 print('\nBucket by BinaryBrain_ [version: 3.0.0]\nCopyright(c) 2019 Mateus Morais (mateusmoraisdias3@gmail.com).\nAll rights reserved.\n')
 
     io.write("Script name: ")
