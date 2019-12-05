@@ -1,0 +1,28 @@
+[to Basic]
+
+-- This script compares input with bol values --
+
+#if-else in Bucket:
+
+    bucket open:
+		
+        str bin as sand with '<<< '
+
+        if bin equals 'yes' and bin unlike 'nil' do:
+
+            show: '{n}>>> true'
+        end.
+
+        even bin equals 'not' or bin equals 'nil' do:
+
+            show: '{n}>>> false'
+        end.
+
+        else:
+
+            show: '{n}>>> something else'
+        end.
+
+        show: '{n}>>> bye!'
+    end m.
+close.

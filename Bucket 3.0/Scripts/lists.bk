@@ -1,0 +1,15 @@
+[to Basic]
+
+#lists in Bucket:
+
+    bucket open:
+    
+        lst[str] fruits as [1 : 'aple', 2 : 'grape', 3 : 'orange']
+        show: 'fruits: [0]{n}' with fruits
+
+        show: '{n}added "pinaple"{n}{n}'
+
+        in: [4] of fruits put 'pinaple'
+        show: 'fruits: [0]' with fruits
+    end m.
+close.

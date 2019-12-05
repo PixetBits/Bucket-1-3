@@ -1,0 +1,16 @@
+[to Basic]
+
+#forloop in Bucket:
+
+    bucket open:
+
+        num limit as 1
+        for 8 times if limit smaller 8 do:
+
+            show: '[0] loop' with limit
+
+            if limit unlike 8 do:; show: '{n}'; end.
+            rise: limit
+        end l.
+    end m.
+close.

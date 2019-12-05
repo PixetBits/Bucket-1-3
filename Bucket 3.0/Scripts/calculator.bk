@@ -1,0 +1,47 @@
+[to Basic]
+
+#calculator in Bucket:
+
+    bucket open:
+
+        str fnum as sand with 'first number: '
+        convert: fnum to num
+
+        str opr as sand with 'operation: '
+
+        str lnum as sand with 'other number: '
+        convert: lnum to num
+
+        show: '{n}[0] [1] [2] = ' with fnum, opr, lnum
+
+        if opr equals '+' do:
+
+            make: fnum + lnum
+            show: '[0]' with fnum
+        end.
+
+        if opr equals '-' do:
+
+            make: fnum - lnum
+            show: '[0]' with fnum
+        end.
+
+        if opr equals '*' do:
+
+            make: fnum * lnum
+            show: '[0]' with fnum
+        end.
+
+        if opr equals '/' do:
+
+            make: fnum / lnum
+            show: '[0]' with fnum
+        end.
+
+        if opr equals '^' do:
+
+            make: fnum ^ lnum
+            show: '[0]' with fnum
+        end.
+    end m.
+close.

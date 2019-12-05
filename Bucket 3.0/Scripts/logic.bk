@@ -1,0 +1,34 @@
+[to Basic]
+
+#logic in Bucket:
+
+    bucket open:
+
+        bol true as yes; bol false as not
+        
+        show: 'is true or false?'
+        str vall as sand with '{n}vall: '
+
+        convert: vall to bol
+
+        if true do:
+
+            if vall do:
+
+                show: '{n}you choose true!'
+            end.
+
+            else:
+
+                show: '{n}you choose false!'
+            end.
+        end.
+
+        set: false to vall
+
+        if false equals not do:
+
+            show: '{n}this is sad...'
+        end.
+    end m.
+close.

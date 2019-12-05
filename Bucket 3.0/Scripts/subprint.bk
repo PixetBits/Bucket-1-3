@@ -1,0 +1,25 @@
+[to Basic]
+
+#subprint in Bucket:
+
+    bucket open:
+
+        str msg as ''
+
+        call: print:'hello!{n}' to self.
+        call: add:'bye' to msg
+
+        show: msg
+    end m.
+
+    print task:string
+
+        show: string
+    end t.
+
+    add task:string
+
+        make: string + '!'
+        return: string
+    end t.
+close.

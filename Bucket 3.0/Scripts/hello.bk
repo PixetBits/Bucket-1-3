@@ -1,0 +1,9 @@
+[to Basic]
+
+#hello in Bucket:
+
+     bucket open:
+
+      show: 'hello world!'
+    end m.
+ close.

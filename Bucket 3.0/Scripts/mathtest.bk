@@ -1,0 +1,22 @@
+[to Basic]
+
+#mathtest in Bucket:
+
+    bucket open:
+
+        str bin as sand with 'number: '
+        convert: bin to num
+
+        make: bin + bin
+        show: 'double: [0]{n}' with bin
+
+        num bout as 0
+        set: bout to bin
+
+        num other as bout
+        make: other / 4
+
+        make: bout / other
+        show: 'equals: [0] / [1] = [2]' with bin, other, bout
+    end m.
+close.

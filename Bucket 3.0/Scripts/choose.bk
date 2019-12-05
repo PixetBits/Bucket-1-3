@@ -1,0 +1,15 @@
+[to Basic]
+
+#choose in Bucket:
+
+    bucket open:
+
+        str index as sand with 'Choose a value from 1 to 5: '; str value as ''
+        lst[str] numbers as [1 : 'one', 2 : 'two', 3 : 'three', 4 : 'four', 5 : 'five']
+
+        give: numbers[index] to value
+
+        if value equals nil do:; show: 'Index out of range'; end.
+        else:; show: 'value: [0]' with value; end.
+    end m.
+close.

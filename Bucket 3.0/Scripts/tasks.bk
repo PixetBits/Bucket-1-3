@@ -1,0 +1,15 @@
+[to Basic]
+
+#tasks in Bucket:
+
+    bucket open:
+
+        call: simple to self.
+        show: 'This is a main line!'
+    end m.
+
+    simple task:
+
+        show: 'This is a task line!{n}'
+    end t.
+close.

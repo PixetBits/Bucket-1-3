@@ -1,0 +1,13 @@
+[to Basic]
+
+-- This code shows user input --
+
+#inputtest in Bucket:
+
+    bucket open:
+        
+        str bin as sand with 'your input: '
+        show: 'your input: [0]' with bin
+
+    end m.
+close.

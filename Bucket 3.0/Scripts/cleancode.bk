@@ -1,0 +1,13 @@
+[to Basic]
+
+#cleancode in Bucket:
+
+    bucket open:
+
+        num x as 0; num y as 1; num z as 2
+        show: '[0], [1] and [2]{n}' with x, y, z
+
+        both: x, y, z as 3
+        show: 'now [0], [1] and [2]' with x, y, z
+    end m.
+close.
