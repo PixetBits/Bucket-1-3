@@ -45,7 +45,7 @@ You can give arguments to ``show:`` function, example:
       >>> value: 2 + 3 = 5
 
 ### Input
-``sand`` : return the user input.                                                                                                       
+``sand`` : returns the user input.                                                                                                       
 You can give arguments to ``sand:`` function, example:
 
       sand: with 'your value: '
@@ -162,7 +162,7 @@ To give an argument put the variable name in the end of line, example:
       
       end t.
       
-Important: you can just have one argument. If you need more, use a list as argument.
+Important: you can have just one argument. If you need more, use a list as argument.
 
 An task returns a value with the ``return:`` keyword.
 To call a task wich returns a value, uses:
