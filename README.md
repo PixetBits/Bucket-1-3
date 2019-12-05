@@ -1,72 +1,32 @@
-# BucketProgrammingLanguage
+# Bucket Programming Language
 Bucket is a esoteric programing language inspired in ZOMBIE, python, lua and C#. Bucket are hight level, iperative, and terminal-oriented.
 The name "Bucket" means Basic Unity-Control to Kindle Eletrical Tapes. With Bucket you can do simple scripts to read, edit, add, replace or anything a computer can do with user input. For example, a sand castle.
 
 # Hello world in Bucket:
-
+      
       [to Basic]
       #helloworld in Bucket:
- 
+      
       bucket open:
       show: 'Hello world!'
       end m.
       
       close.
 
-# Declare classes:
-
-In Bucket we have two types of classes: ``in Bucket:`` and ``in PLayground:``. The ``in Bucket:`` class is the main file, and the ``in PLayground:`` are called as "Toy", a class wich can be imported by the main file.
-
-## Main file :
-
-      [to Basic]
-      #mainclss in Bucket:
-      
-      with #otherclss in Sandbox.
-      
-      bucket open:
-      call example to self.
-      end m.
-      
-      close.
-      
-## Toy class :
-
-      [to Basic]
-      #otherclss in Playground:
-      
-      example task:
-      show: 'something'
-      end t.
-      
-      close.
-      
- The main file imports the ``example`` task from ``toy`` class and call it after importing. 
-
-# Main method and tasks
-The main method, ``bucket open:``, are the only place where have execution. Tasks are just functions wich can get, or not, values and "die" after run, returning a value or not. Basicly Tasks are a extention of the single method.
-
-      -- Main method --
-      bucket open:
-      call print to self.
-      
-      num number as 10
-      call other:number to number
-      end m.
-      
-      -- Tasks --
-      print task:
-      show 'Hello!'
-      end t.
-      
-      num other task:num
-      make num + 1
-      return num
-      end t.
-
-Here the Main calls the task ``print`` in no return mode, with ``to self.`` keyword. Then calls ``other``, giving the value of the variable ``number``, and return to itself.
-
 # API Reference
+
+The script file extention is .bk
+
+## Create script
+Your code must have the ``[to Basic]`` library declared, before all, and you should put the same name in the class and the file, example:
+      
+      -- example.bk --
+      
+      [to Basic]
+      #example in Bucket:
+      
+      -- Your code --
+      close.
 
 ## Comment
 Anything between ``--`` is removed from the script, example:                                                                               
@@ -75,7 +35,7 @@ Anything between ``--`` is removed from the script, example:
       >>> the comentary will desappear
 
 ## Bucket default functions
-Here we have the classic functions inported by the ``to Basic`` lib.
+The classic functions inported by the ``[to Basic]`` library.
 
 ### Output
 ``show: `` : requires a string. Prints something in the terminal.                                                                       
@@ -122,17 +82,17 @@ You can change the data type of an variable, you can add or remove values, etc.
 ``[name]`` : variable name.
 
 ``convert [name] to [type]``: converts a variable to other data type, if it's possible.                                                 
-``[name]`` : variable name. ``[type]`` : the new variable type, the same of keywords.
+``[name]`` : variable name. ``[type]`` : the new variable type, the same of declaration keywords.
 
 ### Logic door
-``if`` run the lines bellow if the statlement is true. ``if`` block structure:                                                           
+``if`` runs the lines bellow if the statlement is true. ``if`` block structure:                                                           
       
       if yes do:
       
       -- Something --
       end.
       
-``even`` it's called if the last logic block evalues to false. Run the lines bellow if the statlement is true. ``even`` block structure: 
+``even`` is called if the last logic block evalues to false. It runs the lines bellow if the statlement is true. ``even`` block structure: 
 
       if not do:
       end.
@@ -142,7 +102,7 @@ You can change the data type of an variable, you can add or remove values, etc.
       -- Something --
       end.
   
-  ``else`` it's called if the last logic block evalues to false. ``else`` block structure:
+  ``else`` is called if the last logic block evalues to false. ``else`` block structure:
   
       if not do:
       end.
@@ -175,7 +135,57 @@ You can change the data type of an variable, you can add or remove values, etc.
 ``and`` have a greater priority than ``or``, so it's replaced by decayed value first. Example:
 
       yes and yes or yes and not
-      --- yes or not ---
+      >>> yes or not
       >>> yes
       
 You can understand it like this: ``(yes and yes) or (yes and not)``
+
+## Main function and Tasks
+The main function is the first and only block executed automatically. You can open the main function block with ``bucket open:`` and close it with ``end m.``.
+
+      bucket open:
+      -- your code --
+      end m.
+
+To declare a ``task`` use the keyword ``task:``, example:
+
+      print task:
+      show: 'hello'
+      end t.
+      
+To give an argument put the variable name in the end of line, example:
+      
+      question task:string
+      
+      make: string + '?'
+      show: string
+      
+      end t.
+      
+Important: you can just have one argument. If you need more, use a list as argument.
+
+An task returns a value with the ``return:`` keyword.
+To call a task wich returns a value, uses:
+      
+      bucket open:
+      
+      str retrn as 're'
+      call func: to retrn
+      
+      show: retrn
+      
+      close m.
+      
+      func task:sub
+      
+      make: sub + 'turn!'
+      return: sub
+      
+      end t.
+      
+      >>> return!
+      
+To call a task with no return use:
+
+      call func to self.
+      
