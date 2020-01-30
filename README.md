@@ -18,7 +18,7 @@ The name "Bucket" means Basic Unity-Control to Kindle Eletrical Tapes. With Buck
 The script file extention is .bk
 
 ## Create script
-Your code must have the ``[to Basic]`` library declared, before all, and you should put the same name in the class and the file, example:
+Your code must have the ``[to Basic]`` library declared, before all, and you should put the same name in the class and the file, e.g.
       
       -- example.bk --
       
@@ -29,24 +29,27 @@ Your code must have the ``[to Basic]`` library declared, before all, and you sho
       close.
 
 ## Comment
-Anything between ``--`` is removed from the script, example:                                                                               
+Anything between ``--`` is removed from the script, e.g.                                                                               
 
       show: 'the comentary will -- not -- desappear' --look!--
       >>> the comentary will desappear
+
+## Join lines
+To whrite two diferent lines in a single, use semicolons. e.g.
 
 ## Bucket default functions
 The classic functions inported by the ``[to Basic]`` library.
 
 ### Output
 ``show: `` : requires a string. Prints something in the terminal.                                                                       
-You can give arguments to ``show:`` function, example: 
+You can give arguments to ``show:`` function, e.g. 
 
       show: 'value: [0] + [1] = [2]' with 2, 3, 5
       >>> value: 2 + 3 = 5
 
 ### Input
 ``sand`` : returns the user input.                                                                                                       
-You can give arguments to ``sand:`` function, example:
+You can give arguments to ``sand:`` function, e.g.
 
       sand: with 'your value: '
       <<< value:
@@ -57,35 +60,29 @@ You can give arguments to ``sand:`` function, example:
 ``str`` : declares a string value. A text between simple apostrophe (').                                                            
 ``bol`` : declates a binary value. Can be true (yes) or false (not).                                                                     
 
-You can turn a variable into a list with the keyword ``lst`` before the data type keyword, example.                                     
-``lst str as [0 : 'a', 1 : 'b', 2 : 'c']``
+You can turn a variable into a list with the keyword ``lst`` and the data type between square brackets, example.                                     
+``lst[str] as [0 : 'a', 1 : 'b', 2 : 'c']``
 
 The list index are a 4th type of data, "text". This means you have no to convert variables to use as index. '0' is the same of 0, for example.
 
 ### Data manangement
 You can change the data type of an variable, you can add or remove values, etc.
 
-``set [name] to [value]`` : sets a new value to a variable.                                                                             
-``[name]`` : variable name. ``[value]`` : other variable or value.
+``set [name] to [value]`` : sets the value of ``value`` to a ``name``.                                                                 
 
-``make: [name] [operator] [value]`` : makes a math operation (+, -, *, /, %, ^).                                                   
-``[name]`` : variable name. ``[operator]`` : math operation to do. ``[value]`` : other variable or value.                               
-``+`` : add. ``-`` subtract. ``*`` : multyply. ``/`` : divide. ``%`` : rest of division. ``^`` : power.
+``make: [name] [operator] [value]`` : move the result of a math operation (+, -, *, /, %, ^) between ``name`` and ``value`` to ``name``. 
+opetators: ``+`` : add; ``-`` subtract; ``*`` : multyply; ``/`` : divide; ``%`` : rest of division; ``^`` : power.
 
-``rise: [name]`` : increases a numeric variable by 1.                                                                       
-``[name]`` : variable name.
+``rise: [name]`` : increases ``name`` (a numeric variable) by 1.                                                                       
 
-``down: [name]`` : decreases a numeric variable by 1.                                                                       
-``[name]`` : variable name.
+``down: [name]`` : decreases ``name`` (a numeric variable) by 1.                                                                  
 
-``round [name]``: rounds a number value.                                                                                                 
-``[name]`` : variable name.
+``round [name]``: rounds a the value of ``name`` (a numeric variable).
 
-``convert [name] to [type]``: converts a variable to other data type, if it's possible.                                                 
-``[name]`` : variable name. ``[type]`` : the new variable type, the same of declaration keywords.
+``convert [name] to [type]``: converts a ``name`` to ``type``, if it's possible.                                                 
 
 ### Logic door
-``if`` runs the lines bellow if the statlement is true. ``if`` block structure:                                                           
+``if`` runs the lines bellow if the statlement is true. ``if`` block structure:                                                         
       
       if yes do:
       
