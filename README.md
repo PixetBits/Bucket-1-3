@@ -37,6 +37,9 @@ Anything between ``--`` is removed from the script, e.g.
 ## Join lines
 To whrite two diferent lines in a single, use semicolons. e.g.
 
+      show: 'hello ';show: 'world!'
+      >>> hello world!
+
 ## Bucket default functions
 The classic functions inported by the ``[to Basic]`` library.
 
@@ -186,3 +189,13 @@ To call a task with no return use:
 
       call func to self.
       
+## Meta characters
+Meta characters or Metachars are special simbles that represents a string value, like spaces or new lines.
+
+``{n}`` New Line: breaks the line.                                                                                                       
+``{s}`` Space: represents a space.                                                                                                       
+``{q}`` Simple quote: represents ``'``.                                                                                                 
+``{b}`` Backspace: represents backspace.                                                                                                 
+``{t}`` Tab: represents tab (multiple spaces).                                                                                           
+
+Metachar match are not implemented yet.
