@@ -179,18 +179,16 @@ To call a task wich returns a value, uses:
       
       bucket open:
       
-      str retrn as 're'
-      call func: to retrn
+      str val as 're'
+      call func:val to val
       
-      show: retrn
-      
+      show: val
       close m.
       
       func task:sub
       
       make: sub + 'turn!'
       return: sub
-      
       end t.
       
       >>> return!
