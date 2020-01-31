@@ -5,11 +5,19 @@
     bucket open:
 
         num limit as 1
-        for 8 times if limit smaller 8 do:
+        num _mult as 2
 
-            show: '[0] loop' with limit
+        for 32 times if limit smaller 16 do:
 
-            if limit unlike 8 do:; show: '{n}'; end.
+            set: _mult to limit
+            make: _mult % 2
+
+            if _mult equals 0 do:
+                
+                show: '[0] loop' with limit
+                if limit unlike 16 do:; show: '{n}'; end.
+            end.
+
             rise: limit
         end l.
     end m.

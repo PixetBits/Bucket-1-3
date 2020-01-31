@@ -1,0 +1,24 @@
+[to Basic]
+[to Mathf]
+
+#dice in Bucket:
+
+    bucket open:
+
+        show: 'type "exit" o end script{n}{n}'
+        
+        str bin as sand with 'dice: 1d'
+        convert: bin to num
+
+        num bout as 0
+
+        while bin unlike 'exit' do:
+
+            set: bout to math_ran:1, bin
+            show: '1d[0] = [1]{n}{n}' with bin, bout
+
+            set: bin to sand with 'dice: 1d'
+            convert: bin to num
+        end l.
+    end m.
+close.

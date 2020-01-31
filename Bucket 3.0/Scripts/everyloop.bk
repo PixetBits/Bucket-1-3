@@ -1,0 +1,32 @@
+[to Basic]
+
+#everyloop in Bucket:
+
+    bucket open:
+
+        lst[str] fruits as [0 : 'pinapple', 1 : 'orange', 2 : 'grape']
+
+        str item as sand with 'Ask for fruit: '
+        str this as ''
+
+        show: '{n}'
+
+        every fruit in fruits do:
+
+            if fruit equals item do:
+                
+                find: fruit in fruits to this
+                show: '[0] found at [1]' with fruit, this
+                break.
+            end.
+
+            else:
+
+                show: '[0] is not [1]{n}' with item, fruit
+            end.
+        end l.
+
+        find: item in fruits to this
+        if this equals 'none' do:; show: 'fruit not found'; end
+    end m.
+close.

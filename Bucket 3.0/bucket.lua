@@ -1,9 +1,12 @@
 -- My own library --
-require('Essentials Modules/SystemLib')
-require('Essentials Modules/RunnerLib')
+require('Essentials Modules/internals_lib')
+require('Essentials Modules/runner_ln_lib')
+math.randomseed(os.time())
 
 -- Open and store script --
 local data = {}
+
+-- Max of lines: 16379 --
 
 function loadfile(name)
 
@@ -19,12 +22,43 @@ function loadfile(name)
         sys.error('', '', "This file does not exist. Please check the name and try again.")
     end
 
-    bkfile = {}
     script = {}
     
+    path = name
+    this = name
+
+    -- Fix name --
+    while this:find('\\') ~= nil do
+        
+        index = this:find('\\')
+        this = this:sub(index + 1)
+    end
+
+    path = path:gsub(this, '')
+
     -- Multyple comands in a single line --
     for line in io.lines(name) do
         
+        -- Import included scripts --
+        while line:find('%[%w%i%t%h%s%#(.-)%]') do
+            
+            othr = line:find('#')
+            othr = line:sub(othr)
+            
+            othr = othr:gsub(']', '')
+            othr = othr:gsub('#', '')
+
+            impr = ''
+
+            for line in io.lines(path .. othr .. '.bk') do
+                
+                impr = impr .. line .. ';'
+            end
+
+            line = line:gsub('%[%w%i%t%h%s%#(.-)%]', impr)
+            line = line:sub(1, -1)
+        end
+
         -- Semicolon --
         if line:find(';') ~= nil then
             
@@ -84,24 +118,13 @@ function loadfile(name)
         if line ~= "" then data[#data + 1] = line end
     end
 
-    -- Fix name --
-    while name:find('\\') ~= nil do
-        
-        index = name:find('\\')
-        name = name:sub(index + 1)
-    end
-
+    name = this
     name = name:gsub('.bk', '')
 
     io.write("\nRuning: " .. name .. '...\n')
     io.write(string.rep('=', string.len('Runing: ' .. name .. '...')) .. '\n\n')
 
-    -- Call runner --
-    run(data, 1, true, name)
-
-    io.write('\n\n=======================\n')
-    io.write("Type any key to exit...\n")
-    io.read()
+    return data, name
 end
 
 -- Argument --
@@ -112,11 +135,18 @@ if arg[1] ~= nil then
 -- File name --
 else
 
--- Copyright (c) --
-print('\nBucket by BinaryBrain_ [version: 3.0.0]\nCopyright(c) 2019 Mateus Morais (mateusmoraisdias3@gmail.com).\nAll rights reserved.\n')
+    -- Copyright (c) --
+    print('\nBucket by BinaryBrain_ [version: 3.0.0]\nCopyright(c) 2019 Mateus Morais (mateusmoraisdias3@gmail.com).\nAll rights reserved.\n')
 
     io.write("Script name: ")
     input = io.read()
 end
 
-loadfile(input)
+lines, file = loadfile(input)
+
+-- Call runner --
+run(lines, 1, true, file)
+
+io.write('\n\n=======================\n')
+io.write("Type any key to exit...\n")
+io.read()

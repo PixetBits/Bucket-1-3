@@ -1,0 +1,21 @@
+[to Basic]
+[to Mathf]
+
+#tomath in Bucket:
+
+    bucket open:
+
+        num ray as 2.5
+        num sin as math_sin:ray
+        num cos as math_cos:ray
+        num tan as math_tan:ray
+
+        show: 'sin of [0] = [1]{n}' with ray, sin
+        show: 'cos of [0] = [1]{n}' with ray, cos
+        show: 'tan of [0] = [1]{n}' with ray, tan
+
+        num rand as math_ran:1, 20
+
+        show: '{n}1d20 = [0]' with rand
+    end m.
+close.
