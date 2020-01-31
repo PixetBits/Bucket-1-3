@@ -63,8 +63,9 @@ You can give arguments to ``sand:`` function, e.g.
 ``str`` : declares a string value. A text between simple apostrophe (').                                                            
 ``bol`` : declates a binary value. Can be true (yes) or false (not).                                                                     
 
-You can turn a variable into a list with the keyword ``lst`` and the data type between square brackets, e.g.                                     
-``lst[str] as [0 : 'a', 1 : 'b', 2 : 'c']``
+You can turn a variable into a list with the keyword ``lst`` and the data type between square brackets, e.g.                             
+
+      lst[str] as [0 : 'a', 1 : 'b', 2 : 'c']
 
 The list index are a 4th type of data, "text". This means you have no to convert variables to use as index. '0' is the same of 0, for example.
 
