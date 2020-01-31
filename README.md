@@ -41,7 +41,7 @@ To whrite two diferent lines in a single, use semicolons. e.g.
       >>> hello world!
 
 ## Error skip
-If a line can rise a error, put a ``?`` in the end of the line, e.g.
+If a line can rise an error, put a ``?`` in the end of the line, e.g.
 
       str number as 1
       >>> [Compiler Error] This is not a string value. In line [str number as 0]
