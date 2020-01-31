@@ -199,7 +199,6 @@ function run(lines, clin, enbd, name, sub)
 
     -- Run lines on main --
     if enbd and onfc and oncl then
-
     --# Put yours lib's modules below ----------------------#--
 
         -- to Mathf's module --
@@ -324,7 +323,7 @@ function run(lines, clin, enbd, name, sub)
         if line:sub(1, 4) == "str " then actS = newStr(elin, line:sub(5), actS) end
         if line:sub(1, 4) == "bol " then actB = newBol(elin, line:sub(5), actB) end
 
-        if line:sub(1, 3) == "lst" then actL = newLst(elin, line:gsub('(%lst)%s*', ''), actL) end
+        if line:sub(1, 3) == "lst" then actL = newLst(elin, line:gsub('(lst)%s*', ''), actL) end
 
         -- Bucket output --
         if line:sub(1, 6) == "show: " then
@@ -595,7 +594,7 @@ function run(lines, clin, enbd, name, sub)
             mln = line:gsub('convert: ', '')
 
             -- convert var[1] to[2] type[3] --
-
+            
             -- Get values --
             if mln:find(' to ') ~= nil then
 
@@ -607,10 +606,11 @@ function run(lines, clin, enbd, name, sub)
             if ntype == 'num' then
 
                 -- A Str --
-                if isStr(vvall, actS) then
+                if isStr(vname, actS) then
 
                     -- Update value --
-                    if actS[vname] ~= nil then vvall = actS[vname] end
+                    if actS[vname] ~= nil then vvall = actS[vname]
+                    else sys.error(elin, 'c', 'Unable to convert a nonexistent variable.') end
 
                     -- Is not a num --
                     if actN[vname] == nil then
@@ -624,7 +624,7 @@ function run(lines, clin, enbd, name, sub)
                 end
 
                 -- A bol --
-                if isBol(vvall, actB) then
+                if isBol(vname, actB) then
 
                     -- Update value --
                     if actB[vname] ~= nil then vvall = actB[vname] end
@@ -646,7 +646,8 @@ function run(lines, clin, enbd, name, sub)
                 if isNum(vvall, actN) then
 
                     -- Update value --
-                    if actN[vname] ~= nil then vvall = actN[vname] end
+                    if actN[vname] ~= nil then vvall = actN[vname]
+                    else sys.error(elin, 'c', 'Unable to convert a nonexistent variable.') end
 
                     if actS[vname] == nil then actS[vname] = tostring(vvall)
                     else sys.error(elin, 'c', 'You already have a string with the same name.') end
@@ -674,10 +675,11 @@ function run(lines, clin, enbd, name, sub)
             elseif ntype == 'bol' then
 
                 -- A int --
-                if isNum(vvall, actN) then
+                if isNum(vname, actN) then
 
                     -- Update value --
-                    if actN[vname] ~= nil then vvall = actN[vname] end
+                    if actN[vname] ~= nil then vvall = actN[vname]
+                    else sys.error(elin, 'c', 'Unable to convert a nonexistent variable.') end
 
                     if actB[vname] == nil then
                         
@@ -690,16 +692,16 @@ function run(lines, clin, enbd, name, sub)
                 end
 
                 -- A string --
-                if isStr(vvall, actS) then
+                if isStr(vname, actS) then
 
                     -- Update value --
-                    if actS[vname] ~= nil then vvall = actS[vname] end
+                    if actS[vname] ~= nil then vvall = actS[vname]
+                    else sys.error(elin, 'c', 'Unable to convert a nonexistent variable.') end
 
                     if actB[vname] == nil then
                         
-                        if vvall == 'yes' or vvall == 'true' or vvall == true then actB[vname] = true
-                        elseif vvall == 'not' or vvall == 'false' or vvall == false then actB[vname] = false
-                        
+                        if vvall == 'yes' or vvall == 'true' then actB[vname] = true
+                        elseif vvall == 'not' or vvall == 'false' then actB[vname] = false   
                         else sys.error(elin, 'c', 'Bucket cannot convert this non boolean value.') end
 
                         actS[vname] = nil
@@ -1181,6 +1183,7 @@ function run(lines, clin, enbd, name, sub)
             end
         end
 
+        -- While loop --
         if line:sub(1, 6) == 'while ' then
             
             mln = line:sub(7)

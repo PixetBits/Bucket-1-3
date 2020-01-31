@@ -86,7 +86,7 @@ function sys.error(line, error, message)
     if line:sub(-1) == '?' then return end
 
     -- Print error --
-    print(error .. message .. "\nIn line [" .. line.l .. "] at [" .. tostring(line.n) .. "]")
+    print(error .. message .. "\nIn line [" .. line .. "]")
     print("type any key to exit...")
     io.read()
 
