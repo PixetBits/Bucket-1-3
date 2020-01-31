@@ -40,6 +40,15 @@ To whrite two diferent lines in a single, use semicolons. e.g.
       show: 'hello ';show: 'world!'
       >>> hello world!
 
+## Error skip
+If a line can rise a error, put a ``?`` in the end of the line, e.g.
+
+      str number as 1
+      >>> [Compiler Error] This is not a string value. In line [str number as 0]
+      
+      str number as 1?
+      >>>
+
 ## Bucket default functions
 The classic functions inported by the ``[to Basic]`` library.
 
@@ -81,7 +90,7 @@ opetators: ``+`` : add; ``-`` subtract; ``*`` : multyply; ``/`` : divide; ``%`` 
 
 ``down: [name]`` : decreases ``name`` (a numeric variable) by 1.                                                                  
 
-``round [name]``: rounds a the value of ``name`` (a numeric variable).
+``round [name]``: rounds the value of ``name`` (a numeric variable).
 
 ``convert [name] to [type]``: converts a ``name`` to ``type``, if it's possible.                                                 
 
