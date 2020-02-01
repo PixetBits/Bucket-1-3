@@ -231,7 +231,7 @@ You can import code from another script. Everything written on it will be transc
 Syntax: ``[with #[Name]]``                                                                                                               Where ``Name`` is the script name (without the extention). Bucket will assume that the imported script will be on the same path as the main script.
 
 ## To Mathf
-Default Math lib.                                                                                                                        
+Default Math lib. Put ``[to Mathf]`` bellow ``[to Basic]`` to import it.                                                                                                                        
 ### math_sin, math_cos, math_tan
 Syntax: ``math_[fun]:[num]``                                                                                                              Where ``fun`` is sin, cos or tan, and ``num`` is the argument given to. Returns the result of the operation used.
 
