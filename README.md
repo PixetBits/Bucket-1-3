@@ -154,15 +154,15 @@ You can understand it like this: ``(yes and yes) or (yes and not)``
 Loops are blocks of code that are repeated a given number of times following a condition. Bucket supports ``For``, ``Every`` and ``While`` loops.
 
 ### For loop
-Syntax: ``for [num] times if [statlement] do: ... end l.``
+Syntax: ``for [num] times if [statlement] do: ... end l.``                                                                               
 For Loop tries to repeat the code ``num`` times if the ``statlement`` is true.
 
 ### Every loop
-Syntax: ``every [item] in [lst] do: ... end l.``
+Syntax: ``every [item] in [lst] do: ... end l.``                                                                                         
 Every loop repeats the block for every ``item`` in ``lst``.
 
 ### While loop
-Syntax: ``while [statlement] do: ... end l.``
+Syntax: ``while [statlement] do: ... end l.``                                                                                           
 While loop repeats the code while the ``statlement`` is true.
 
 ### break.
@@ -225,3 +225,15 @@ Meta characters or Metachars are special simbles that represents a string value,
 ``{t}`` Tab: represents tab (multiple spaces).                                                                                           
 
 Metachar match are not implemented yet.
+
+## Include
+You can import code from another script. Everything written on it will be transcribed to the code that is importing it.                  
+Syntax: ``[with #[Name]]``                                                                                                               Where ``Name`` is the script name (without the extention). Bucket will assume that the imported script will be on the same path as the main script.
+
+## To Mathf
+Default Math lib.                                                                                                                        
+### math_sin, math_cos, math_tan
+Syntax: ``math_[fun]:[num]``                                                                                                              When ``fun`` is sin, cos or tan, and ``num`` is the argument given to.
+
+### math_ran
+Syntax:``math_ran:[f], [l]``                                                                                                             Returns a random number between ``f`` (a number) and ``l`` (a number too).
