@@ -1,6 +1,6 @@
 # Bucket Programming Language
-Bucket is a esoteric programing language inspired in ZOMBIE, python, lua and C#. Bucket are hight level, iperative, and terminal-oriented.
-The name "Bucket" means Basic Unity-Control to Kindle Eletrical Tapes. With Bucket you can do simple scripts to read, edit, add, replace or anything a computer can do with user input. For example, a sand castle.
+Bucket is a esoteric programing language inspired in ZOMBIE, python, lua and C#. Bucket are hight level, iperative and terminal-oriented.
+The name "Bucket" means Basic Unity-Control to Kindle Eletrical Tapes. With Bucket you can do simple scripts to read, edit, add, replace or anything an computer can do with user input. For example, a sand castle.
 
 # Hello world in Bucket:
       
