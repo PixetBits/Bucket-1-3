@@ -150,6 +150,24 @@ opetators: ``+`` : add; ``-`` subtract; ``*`` : multyply; ``/`` : divide; ``%`` 
       
 You can understand it like this: ``(yes and yes) or (yes and not)``
 
+## Loops
+Loops are blocks of code that are repeated a given number of times following a condition. Bucket supports ``For``, ``Every`` and ``While`` loops.
+
+### For loop
+Syntax: ``for [num] times if [statlement] do: ... end l.``
+For Loop tries to repeat the code ``num`` times if the ``statlement`` is true.
+
+### Every loop
+Syntax: ``every [item] in [lst] do: ... end l.``
+Every loop repeats the block for every ``item`` in ``lst``.
+
+### While loop
+Syntax: ``while [statlement] do: ... end l.``
+While loop repeats the code while the ``statlement`` is true.
+
+### break.
+Use the ``break.`` keyword to kill a loop.
+
 ## Main function and Tasks
 The main function is the first and only block executed automatically. You can open the main function block with ``bucket open:`` and close it with ``end m.``.
 
