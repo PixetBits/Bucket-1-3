@@ -233,7 +233,7 @@ Syntax: ``[with #[Name]]``                                                      
 ## To Mathf
 Default Math lib.                                                                                                                        
 ### math_sin, math_cos, math_tan
-Syntax: ``math_[fun]:[num]``                                                                                                              When ``fun`` is sin, cos or tan, and ``num`` is the argument given to.
+Syntax: ``math_[fun]:[num]``                                                                                                              Where ``fun`` is sin, cos or tan, and ``num`` is the argument given to. Returns the result of the operation used.
 
 ### math_ran
 Syntax:``math_ran:[f], [l]``                                                                                                             Returns a random number between ``f`` (a number) and ``l`` (a number too).
