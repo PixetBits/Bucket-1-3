@@ -43,10 +43,10 @@ To whrite two diferent lines in a single, use semicolons. e.g.
 ## Error skip
 If a line can rise an error, put an ``?`` in the end of the line, e.g.
 
-      str number as 1
+      str number as yes
       >>> [Compiler Error] This is not a string value. In line [str number as 0]
       
-      str number as 1?
+      str number as yes?
       >>>
 
 ## Bucket default functions
