@@ -81,7 +81,7 @@ The list index are a 4th type of data, "text". This means you have no to convert
 ### Data manangement
 You can change the data type of an variable, you can add or remove values, etc.
 
-``set [name] to [value]`` : sets the value of ``value`` to a ``name``.                                                                 
+``set [name] to [value]`` : sets the value of ``value`` to ``name``.                                                                 
 
 ``make: [name] [operator] [value]`` : move the result of a math operation (+, -, *, /, %, ^) between ``name`` and ``value`` to ``name``. 
 opetators: ``+`` : add; ``-`` subtract; ``*`` : multyply; ``/`` : divide; ``%`` : rest of division; ``^`` : power.
