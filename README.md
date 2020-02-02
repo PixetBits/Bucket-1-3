@@ -81,7 +81,7 @@ The list index are a 4th type of data, "text". This means you have no to convert
 ### Data manangement
 You can change the data type of an variable, you can add or remove values, etc.
 
-``set [name] to [value]`` : sets the value of ``value`` to ``name``.                                                                 
+``set: [name] to [value]`` : sets the value of ``value`` to ``name``.                                                                 
 
 ``make: [name] [operator] [value]`` : move the result of a math operation (+, -, *, /, %, ^) between ``name`` and ``value`` to ``name``. 
 opetators: ``+`` : add; ``-`` subtract; ``*`` : multyply; ``/`` : divide; ``%`` : rest of division; ``^`` : power.
@@ -90,9 +90,9 @@ opetators: ``+`` : add; ``-`` subtract; ``*`` : multyply; ``/`` : divide; ``%`` 
 
 ``down: [name]`` : decreases ``name`` (a numeric variable) by 1.                                                                  
 
-``round [name]``: rounds the value of ``name`` (a numeric variable).
+``round: [name]``: rounds the value of ``name`` (a numeric variable).
 
-``convert [name] to [type]``: converts a ``name`` to ``type``, if it's possible.                                                 
+``convert: [name] to [type]``: converts a ``name`` to ``type``, if it's possible.                                                 
 
 ### Logic door
 ``if`` runs the lines bellow if the statlement is true. ``if`` block structure:                                                         
@@ -213,7 +213,7 @@ To call a task wich returns a value, uses:
       
 To call a task with no return use:
 
-      call func to self.
+      call: func to self.
       
 ## Meta characters
 Meta characters or Metachars are special simbles that represents a string value, like spaces or new lines.
