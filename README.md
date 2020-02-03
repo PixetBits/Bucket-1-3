@@ -94,6 +94,13 @@ opetators: ``+`` : add; ``-`` subtract; ``*`` : multyply; ``/`` : divide; ``%`` 
 
 ``convert: [name] to [type]``: converts a ``name`` to ``type``, if it's possible.                                                 
 
+## List functions
+
+``in: [index] of [lst] set [val]``: set the ``val`` to ``lst`` in ``index``.
+``give: [lst][[index]] to [var]``: move the value at ``index`` at ``lst`` to ``var``.
+``find: [itm] in [lst] to [var]``: move the index of ``itm`` at ``lst`` to ``var``. Returns ``'none'`` if index does not exit.
+``size:[lst]`` : returns the length of ``lst``.
+
 ### Logic door
 ``if`` runs the lines bellow if the statlement is true. ``if`` block structure:                                                         
       
