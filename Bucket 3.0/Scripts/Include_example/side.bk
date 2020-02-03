@@ -1,0 +1,4 @@
+out task:
+
+    show: 'this is running in #side{n}'
+end t.

@@ -4,6 +4,13 @@ function door(elin, line, actN, actS, actB, actL)
 
     -- vall[0] ~~[1] vall[2] do: --
 
+    while line:match("%'(.+%s.+)%'") ~= nil do
+
+        fidx, lidx = line:find("%'(.+)%'")
+
+        line = line:gsub(line:sub(fidx, lidx), line:sub(fidx, lidx):gsub(' ', '_'))
+    end
+
     -- Fix values --
     line = sys.split(line, ' ')
 
@@ -23,7 +30,7 @@ function door(elin, line, actN, actS, actB, actL)
         -- Is a string -- 
         elseif isStr(line[word], actS) then
 
-            if actS[line[word]] ~= nil then line[word] = '\'' .. actS[line[word]] .. '\'' end
+            if actS[line[word]] ~= nil then line[word] = '\'' .. actS[line[word]]:gsub(' ', '_') .. '\'' end
         
         -- Is a bool --
         elseif isBol(line[word], actB) then

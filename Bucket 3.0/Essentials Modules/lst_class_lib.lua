@@ -14,7 +14,8 @@ function newLst(elin, line, actL)
     line = line:sub(6)
 
     -- Get name and value --
-    vname, vvall = sys.midle(line, ' as ')
+    vname, vvall = sys.midle(line:gsub(' ', '_'):gsub('_as_', ' as '), ' as ')
+    vvall = vvall:gsub('_', ' ')
 
     -- A other variable has the same name --
     if actL[vname] ~= nil then sys.error(elin, 'c', "Another lst variable has the same name of this.")
@@ -117,7 +118,7 @@ end
 function isLst(vall, actL)
     
     -- String lst --
-    if vall:find('^%[(.*%:.*)%]') ~= nil then return true
+    if vall:gsub(' ', '_'):match('(.+)%:(.+)') then return true
 
     -- Stored lst --
     elseif actL[vall] ~= nil then return true

@@ -1,0 +1,12 @@
+[to Basic]
+
+#main in Bucket:
+
+    [with #side]
+
+    bucket open:
+
+        call: out to self.
+        show: 'this is running in #main'
+    end m.
+close.

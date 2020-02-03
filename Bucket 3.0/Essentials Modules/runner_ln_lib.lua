@@ -240,6 +240,20 @@ function run(lines, clin, enbd, name, sub)
             line = line:gsub(line:sub(math.min(line:find('sand '))), "'" .. input .. "'")
         end
 
+        -- Lst size --
+        if line:find('size:') ~= nil then
+            
+            -- String indexes --
+            fidx, lidx = line:find('size:')
+            lidx = line:find(' ', lidx)
+
+            mln = line:sub(fidx, lidx)
+            val = sys.split(mln, ':')
+
+            if actL[val[2]] ~= nil then line = line:gsub(mln, tostring(sys.length(actL[val[2]]) - 1))
+            else sys.error(elin, 'c', "Unknow list value.") end
+        end
+
     --# If-even-else system --------------------------------#--
 
         -- If Block --
