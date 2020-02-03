@@ -1,5 +1,14 @@
 sys = {}
 
+function sys.length(list)
+
+    local count = 0
+
+    for i in pairs(list) do count = count + 1 end
+
+    return count
+end
+
 function sys.split(str, div)
 
     -- Table to store substrings --
