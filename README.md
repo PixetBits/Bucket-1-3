@@ -96,9 +96,9 @@ opetators: ``+`` : add; ``-`` subtract; ``*`` : multyply; ``/`` : divide; ``%`` 
 
 ## List functions
 
-``in: [index] of [lst] set [val]``: set the ``val`` to ``lst`` in ``index``.
-``give: [lst][[index]] to [var]``: move the value at ``index`` at ``lst`` to ``var``.
-``find: [itm] in [lst] to [var]``: move the index of ``itm`` at ``lst`` to ``var``. Returns ``'none'`` if index does not exit.
+``in: [index] of [lst] set [val]``: set the ``val`` to ``lst`` in ``index``.                                                             
+``give: [lst][[index]] to [var]``: move the value at ``index`` at ``lst`` to ``var``.                                                   
+``find: [itm] in [lst] to [var]``: move the index of ``itm`` at ``lst`` to ``var``. Returns ``'none'`` if index does not exit.           
 ``size:[lst]`` : returns the length of ``lst``.
 
 ### Logic door
