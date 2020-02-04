@@ -79,7 +79,11 @@ function to.math(elin, line, actN)
         
         else sys.error(elin, 'c', 'Unknow numeric variable (2th argument).') end
 
-        line = line:gsub(line:sub(fidx, lidx), tostring(math.random(farg, larg)))
+        -- Set random seed --
+        math.randomseed(os.time())
+
+        rand = math.random(farg, larg)
+        line = line:gsub(line:sub(fidx, lidx), tostring(rand))
     end
     
     return line

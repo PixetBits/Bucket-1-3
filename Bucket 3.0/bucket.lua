@@ -1,7 +1,6 @@
 -- My own library --
 require('Essentials Modules/internals_lib')
 require('Essentials Modules/runner_ln_lib')
-math.randomseed(os.time())
 
 -- Open and store script --
 local data = {}
@@ -136,7 +135,7 @@ if arg[1] ~= nil then
 else
 
     -- Copyright (c) --
-    print('\nBucket by BinaryBrain_ [version: 3.0.0]\nCopyright(c) 2019 Mateus Morais (mateusmoraisdias3@gmail.com).\nAll rights reserved.\n')
+    print('\nBucket by BinaryBrain_ [version: 3.0.4]\nCopyright(c) 2019-2020 Mateus Morais (mateusmoraisdias3@gmail.com).\nAll rights reserved.\n')
 
     io.write("Script name: ")
     input = io.read()

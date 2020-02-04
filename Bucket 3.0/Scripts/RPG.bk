@@ -12,10 +12,10 @@
 
 		-- Get limit --
 		num limit as size:place
-        down: limit
 
         -- Get random index --
-        num index as math_ran:0, limit
+        num index as math_ran:1, limit
+        down: index
 
         -- Print current place --
         str cPlace as ''
@@ -28,11 +28,11 @@
 		
 		-- Get limit --
 		set: limit to size:food
-        down: limit
 
         -- Get random index --
-        set: index to math_ran:0, limit
-        
+        set: index to math_ran:1, limit
+        down: index
+
         -- Print food --
         str cFood as ''
         give: food[index] to cFood
@@ -61,10 +61,11 @@
         end.
 		
 		-- Get limit --
-		set limit to size:animals
+		set: limit to size:animals
 
         -- Get random index --
-        set: index to math_ran:0, limit
+        set: index to math_ran:1, limit
+        down: index
 		
         -- Print problems --
         str problems as ''
@@ -90,7 +91,7 @@
         -- 25% --
         if cFood equals 'too much' and luck equals 1 do:
             
-            show: 'You died after 5 days. The [0] atacked you at night, atracteds by your food.' with problems
+            show: 'You died after 5 days. The [0] atacked you at night, atracted by your food.' with problems
         end.
     
     -- Too much food --
@@ -100,7 +101,7 @@
         -- 75% --
         if cFood equals 'some' and luck equals 3 do:
             
-            show: 'You survived. You scaped form the [0] and coud get out alive of that place.' with problems
+            show: 'You survived. You escaped from the [0] and could get out alive of that place.' with problems
         end.
 
         -- 50% --
