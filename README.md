@@ -104,6 +104,16 @@ opetators: ``+`` : add; ``-`` subtract; ``*`` : multyply; ``/`` : divide; ``%`` 
 
 ``size:[lst]`` : returns the length of ``lst``.
 
+### Boolean operators
+
+``[var] equals [val]``: means ``==``. Returns ``yes`` if ``var`` and ``val`` have the same value. Else, returns ``not``.                 
+
+``[var] unlike [val]``: means ``!=``. Returns ``yes`` if ``var`` and ``val`` have diferent values. Else, returns ``not``.               
+
+``[var] greater [val]``: means ``>``. Returns ``yes`` if ``var`` has a numeric value greater than ``val``. Else, returns ``not``.       
+
+``[var] smaller [val]``: means ``<``. Returns ``yes`` if ``var`` has a numeric value smaller than ``val``. Else, returns ``not``.
+
 ### Logic door
 ``if`` runs the lines bellow if the statlement is true. ``if`` block structure:                                                         
       
