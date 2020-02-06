@@ -96,7 +96,7 @@ opetators: ``+`` : add; ``-`` subtract; ``*`` : multyply; ``/`` : divide; ``%`` 
 
 ## List functions
 
-``in: [index] of [lst] set [val]``: set the ``val`` to ``lst`` in ``index``.                                                             
+``in: [[index]] of [lst] put [val]``: set the ``val`` to ``lst`` in ``index``.                                                           
 
 ``give: [lst][[index]] to [var]``: move the value at ``index`` at ``lst`` to ``var``.                                                   
 
