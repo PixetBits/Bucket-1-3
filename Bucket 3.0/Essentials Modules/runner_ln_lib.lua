@@ -242,7 +242,7 @@ function run(lines, clin, enbd, name, sub)
             line = line:sub(1, index - 1) .. " '" .. input .. "'"
         end
 		
-		-- Lst size --
+	-- Lst size --
         if line:find('size:') ~= nil then
 
             -- String indexes --
