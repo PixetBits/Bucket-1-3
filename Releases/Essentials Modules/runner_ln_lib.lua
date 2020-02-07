@@ -210,7 +210,7 @@ function run(lines, clin, enbd, name, sub)
     --# Replaceable values ---------------------------------#--
 
         -- Input --
-        if line:find(' sand ') ~= nil then
+        if line:find('%s(sand).?') ~= nil then
 
             -- Argment in sand --
             if string.find(line, ' with ') ~= nil then
@@ -237,7 +237,9 @@ function run(lines, clin, enbd, name, sub)
             end
 
             input = io.read()
-            line = line:gsub(line:sub(math.min(line:find('sand '))), "'" .. input .. "'")
+            index = line:find(' sand')
+
+            line = line:sub(1, index - 1) .. " '" .. input .. "'"
         end
 
     --# If-even-else system --------------------------------#--
@@ -801,7 +803,7 @@ function run(lines, clin, enbd, name, sub)
 
         -- Put value --
         if line:sub(1, 4) == "in: " then
-            
+
             -- in: list[index] put val --
 
             -- Remove keyword --
