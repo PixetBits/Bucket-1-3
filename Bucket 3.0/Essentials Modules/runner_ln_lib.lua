@@ -210,7 +210,7 @@ function run(lines, clin, enbd, name, sub)
     --# Replaceable values ---------------------------------#--
 
         -- Input --
-        if line:find('%s(sand).?') ~= nil then
+        if line:find(' sand ') ~= nil then
 
             -- Argment in sand --
             if string.find(line, ' with ') ~= nil then
@@ -237,14 +237,12 @@ function run(lines, clin, enbd, name, sub)
             end
 
             input = io.read()
-            index = line:find(' sand')
-
-            line = line:sub(1, index - 1) .. " '" .. input .. "'"
+            line = line:gsub(line:sub(math.min(line:find('sand '))), "'" .. input .. "'")
         end
-		
-	-- Lst size --
-        if line:find('size:') ~= nil then
 
+        -- Lst size --
+        if line:find('size:') ~= nil then
+            
             -- String indexes --
             fidx, lidx = line:find('size:')
             lidx = line:find(' ', lidx)
@@ -350,11 +348,13 @@ function run(lines, clin, enbd, name, sub)
                 if not line:find(' with ') then sys.error(elin, 's', 'Missing keyword "with".') end
 
                 -- Get variables --
-                arg = line:sub(math.max(line:find(' with ')) + 1)
+                fidx, lidx = line:find(' with ', sys.last(line, "'") + 1)
+
+                arg = line:sub(lidx + 1)
                 arg = arg:gsub(' ', '')
 
                 -- Remove this of line --
-                line = line:gsub(line:sub(math.min(line:find(' with '))), '')
+                line = line:gsub(line:sub(fidx), '')
 
                 -- Split in ',' --
                 if string.find(arg, ',') ~= nil then arg = sys.split(arg, ',') end
@@ -410,7 +410,7 @@ function run(lines, clin, enbd, name, sub)
                  
                 -- Replace once --
                 elseif arg ~= nil then
-                    
+
                     -- Update value --
 
                     -- Num --
@@ -817,76 +817,69 @@ function run(lines, clin, enbd, name, sub)
 
         -- Put value --
         if line:sub(1, 4) == "in: " then
-
-            -- in: list[index] put val --
-
+            
             -- Remove keyword --
             mln = line:sub(5)
-            mln = sys.split(mln, ' ')
 
-            -- Get list and index --
-            if not mln[1]:find('(.+)%[.+%]') then sys.error(elin, 's', "Wrong syntax.")
-            else
-                
-                ths = sys.split(mln[1], '%[')
-                var = ths[1]
-                idx = ths[2]:sub(1, -2)
-            end
+            -- in: [index] of list set value --
+            sidx, lidx = mln:find('%[.+%]')
 
-            -- Fix index --
-            if actS[idx] ~= nil then idx = actS[idx] end
-            if actN[idx] ~= nil then idx = actN[idx] end
-            if actB[idx] ~= nil then idx = actB[idx] end
+            -- Get list index --
+            index = mln:sub(sidx + 1, lidx - 1)
+            mln = mln:gsub('%[' .. index .. '%]', '')
 
-            if mln[2] ~= "put" then sys.debug(elin, 's', 'Missing keyword "times"')
-            else
+            -- Get new value and list name --
+            if mln:find(' put ') ~= nil then split = sys.split(mln, ' put ')
+            else sys.error(elin, 's', 'Missing "put" keyword.') end
 
-                -- The list exists --
-                if actL[var] ~= nil then
+            lname, ivall = split[1], split[2]
 
-                    -- A string list --
-                    if actL[var].type == 'str' then
+            -- Remove keyword --
+            if lname:sub(1, 4) == " of " then lname = lname:sub(5)
+            else sys.error(elin, 's', 'Missing "of" keyword.') end
 
-                        if isStr(mln[3], actS) then
+            -- The list exists --
+            if actL[lname] ~= nil then
 
-                            if actS[mln[3]] ~= nil then actL[var][tostring(idx)] = actS[mln[3]]
-                            else actL[var][tostring(idx)] = mln[3]:gsub("'", '') end
-                        
-                        -- Unknow value --
-                        else sys.error(elin, 'c', 'Strange value to assignment.') end
-                    end
+                -- A number list --
+                if actL[lname].type == 'num' then
 
-                    -- A numeric list --
-                    if actL[var].type == 'num' then
+                    if isNum(ivall, actN) == true then
 
-                        if isNum(mln[3], actN) then
-                            
-                            if actN[mln[3]] ~= nil then actL[var][tostring(idx)] = actN[mln[3]]
-                            else actL[var][tostring(idx)] = tonumber(mln[3]) end
-                        
-                        -- Unknow value --
-                        else sys.error(elin, 'c', 'Strange value to assignment.') end
-                    end
+                        if actN[ivall] ~= nil then actL[lname][index] = actN[ivall]
+                        else actL[lname][index] = tonumber(ivall) end
 
-                    -- A numeric list --
-                    if actL[var].type == 'bol' then
+                    else sys.error(elin, 'c', 'The value assigned do not match list type.') end
+                end
 
-                        if isBol(mln[3], actB) then
-                            
-                            if actB[mln[3]] ~= nil then actL[var][tostring(idx)] = actB[mln[3]]
-                            else
-                                
-                                if mln[3] == 'yes' then actL[var][tostring(idx)] = true end
-                                if mln[3] == 'not' then actL[var][tostring(idx)] = false end
-                            end
-                        
-                        -- Unknow value --
-                        else sys.error(elin, 'c', 'Strange value to assignment.') end
-                    end
-                
-                -- Unknow list --
-                else sys.error(elin, 'c', 'This list does not exit in the current context.') end
-            end
+                -- A string list --
+                if actL[lname].type == 'str' then
+
+                    if isStr(ivall, actS) == true then
+
+                        if actS[ivall] ~= nil then actL[lname][index] = actS[ivall]
+                        else actL[lname][index] = ivall:gsub('\'', '') end
+
+                    else sys.error(elin, 'c', 'The value assigned do not match list type.') end
+                end
+
+                -- A bool list --
+                if actL[lname].type == 'bol' then
+
+                    if isBol(ivall, actB) == true then
+
+                        if actB[ivall] ~= nil then actL[lname][index] = actB[ivall]
+                        else
+
+                            if ivall == 'yes' then actL[lname][index] = true end
+                            if ivall == 'not' then actL[lname][index] = false end
+                        end
+
+                    else sys.error(elin, 'c', 'The value assigned do not match list type.') end
+                end
+
+            -- Unknow list --
+            else sys.error(elin, 'c', 'This list does not exist.') end
         end
 
         -- Give value --
@@ -1411,7 +1404,6 @@ function run(lines, clin, enbd, name, sub)
                     if mln == true then mln = 'yes' end
                     if mln == false then mln = 'not' end
                 end
-
                 return mln
             
             -- Strange value --
