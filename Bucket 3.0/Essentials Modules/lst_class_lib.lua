@@ -73,7 +73,7 @@ function newLst(elin, line, actL)
             actL[vname] = list
         
         -- Single value --
-        elseif vvall ~= '[:]' then
+        elseif vvall ~= ':' then
             
             -- Get index and value --
             indx, vall = sys.midle(item[itm], ':')
@@ -107,7 +107,7 @@ function newLst(elin, line, actL)
             actL[vname] = list
         
         -- Empty list --
-        elseif vvall == '[:]' then actL[vname] = list end
+        elseif vvall == ':' then actL[vname] = list end
     
     -- This is not a list --
     else sys.error(elin, 'c', "This is not a list value.") end
