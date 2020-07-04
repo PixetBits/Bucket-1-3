@@ -1,4 +1,4 @@
-#Bucket
+# Bucket
 It's an old project of mine. An interpreter of my own programming language, with a focus on dynamics and clean code. The project was discontinued, it's just here for code reference and "historical file". Bucket is the spiritual predecessor of Ghost.
 
 ## Bucket Programming Language
