@@ -1,0 +1,11 @@
+[to Basic]
+
+HelloWorld in Bucket :
+
+	bucket open :
+
+		show 'Hello World!'
+
+	end l.
+
+close.

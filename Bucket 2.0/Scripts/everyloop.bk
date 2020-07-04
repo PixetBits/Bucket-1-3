@@ -1,0 +1,17 @@
+[to Basic]
+
+#everyloop in Bucket:
+
+    bucket open:
+
+        lst str numbers as [0 : 'zero', 1 : 'one', 2 : 'two']
+        
+        every i in numbers do:
+
+            show '[s]' with i
+        end l.
+
+        show ''
+        show 'end'
+    end m.
+close.

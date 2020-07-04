@@ -1,0 +1,18 @@
+[to Basic]
+
+#floats in Bucket:
+
+    bucket open:
+
+        flt pi as 3.14.f
+
+        str bin as sand with 'Your ray : '
+        convert bin to flt
+
+        make bin * 2.0.f
+        make bin * pi
+
+        show 'Your circunference : [f]' with bin
+
+    end m.
+close.

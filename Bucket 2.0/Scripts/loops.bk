@@ -1,0 +1,29 @@
+[to Basic]
+
+#loops in Bucket:
+
+    bucket open:
+
+        int count as 0
+
+        for 8 times if count smaller 7 do:
+
+            show 'now var is [i]' with count
+            rise count in 1
+
+        end l.
+
+        show 'ended as [i]' with count
+
+        lst str num as [0 : 'zero', 1 : 'one', 2 : 'two']
+
+        show ''
+        show 'printing list items:'
+        show ''
+        
+        every item in num do:
+
+            show '[s]' with item
+        end l.
+    end m.
+close.

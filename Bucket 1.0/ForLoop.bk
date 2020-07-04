@@ -1,0 +1,20 @@
+[to Basic]
+
+ForLoop in Bucket :
+
+    bucket open :
+
+        int x = 4
+
+        for 8 times if x < 10 do :
+
+            show '[i]' with x
+            up x in 1
+
+        over l.
+
+        show 'the loop worked!'
+
+    end l.
+
+close.

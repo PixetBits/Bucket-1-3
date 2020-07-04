@@ -1,0 +1,19 @@
+[to Basic]
+
+Power in Bucket :
+
+    bucket open :
+
+		str PwrTs = sand with 'number : '
+		convert PwrTs in int
+	
+        str PwrIn = sand with 'pwr in : '
+        convert PwrIn in int
+
+        make PwrTs ^ PwrIn
+
+        show 'output : [i]' with PwrTs
+    
+    end l.
+
+close.

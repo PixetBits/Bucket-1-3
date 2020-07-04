@@ -1,0 +1,50 @@
+[to Basic]
+
+#calculator in Bucket:
+
+    bucket open:
+
+        -- get the first number --
+        str frst as sand with 'first number: '
+        convert frst to int
+
+        -- get operator --
+        str opr as sand with 'operator: '
+        
+        -- get the other number --
+        str last as sand with 'other number: '
+        convert last to int
+
+        -- sum --
+        if opr equals '+' do:
+            
+            > make frst + last
+        end.
+
+        -- sub --
+        if opr equals '-' do:
+            
+            > make frst - last
+        end.
+
+        -- mul --
+        if opr equals '*' do:
+            
+            > make frst * last
+        end.
+
+        -- div --
+        if opr equals '/' do:
+            
+            > make frst / last
+        end.
+
+        -- elv --
+        if opr equals '^' do:
+            
+            > make frst ^ last
+        end.
+
+        show 'output: [i]' with frst
+    end m.
+close.

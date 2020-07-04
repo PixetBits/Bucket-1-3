@@ -1,0 +1,41 @@
+[to Basic]
+[to MathF]
+
+#dice in Bucket:
+
+    bucket open:
+
+        call hello to self.
+
+        str bin as sand with 'Your dice: d'
+        convert bin to int
+
+        int bout as 0
+        call roll: bin to bout
+
+        convert bout to str
+
+        call print: bout to self.
+    end m.
+
+    roll task: dice
+
+        set dice to rand[1, dice]
+        return dice
+    end t.
+
+    hello task:
+
+        show 'Hello, user!'
+        show ''
+    end t.
+
+    print task: string
+
+        str msg as 'Your dice: ' 
+        make msg + string
+
+        show '[s]' with msg
+    end t.
+
+close.

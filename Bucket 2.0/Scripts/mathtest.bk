@@ -1,0 +1,18 @@
+[to Basic]
+
+#mathtest in Bucket:
+
+    bucket open:
+
+        str x as sand with 'value 1: '
+        str y as sand with 'value 2: '
+
+        convert x to int
+        convert y to int
+
+        make x + y
+		
+		show ''
+        show 'bout: [i]' with x
+    end m.
+close.

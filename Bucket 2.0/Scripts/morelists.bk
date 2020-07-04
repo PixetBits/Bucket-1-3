@@ -1,0 +1,56 @@
+[to Basic]
+
+#morelists in Bucket:
+
+    bucket open:
+
+        str bin as sand with 'Your text: '
+        str obj as sand with 'Your char to find: '
+
+        int index as 0
+        fin obj in bin to index
+
+        if index unlike -1 do:
+
+            > show 'Your char are on [i].' with index
+        end.
+
+        else do:
+
+            > show 'Your text have no [s].' with obj
+        end.
+
+        show ''
+
+        lst str fruits as [a : 'apple', b : 'banana', g : 'grape']
+
+        int size as 0
+        siz of fruits to size
+
+        show 'We have [i] fruits.' with size
+        show 'fruits : [l]' with fruits
+
+        show ''
+
+        add p on fruits as 'pineaple'
+        show 'added "pineaple" to list.'
+        
+        show ''
+
+        siz of fruits to size
+        show 'Now we have [i] fruits.' with size
+        show 'fruits : [l]' with fruits
+
+        show ''
+
+        del b of fruits
+        show 'deleted "banana" from list.'
+        show 'fruits : [l]' with fruits
+
+        show ''
+
+        siz of fruits to size
+        show 'Now we have [i] fruits.' with size
+    end m.
+
+close.

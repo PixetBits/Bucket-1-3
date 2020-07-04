@@ -1,8 +1,5 @@
 to = {}
 
--- Set random seed --
-math.randomseed(os.time())
-
 function to.math(elin, line, actN)
 
     -- Sin --
@@ -81,6 +78,9 @@ function to.math(elin, line, actN)
             else larg = tonumber(larg) end
         
         else sys.error(elin, 'c', 'Unknow numeric variable (2th argument).') end
+
+        -- Set random seed --
+        math.randomseed(os.time())
 
         rand = math.random(farg, larg)
         line = line:gsub(line:sub(fidx, lidx), tostring(rand))

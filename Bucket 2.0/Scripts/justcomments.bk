@@ -1,0 +1,10 @@
+[to Basic]
+
+#justcomments in Bucket:
+
+    bucket open: --this comment do not make diference--
+
+        show 'working' -- this comment will be ignored --
+
+    end m.
+close.

@@ -1,0 +1,7 @@
+#example in Playground:
+
+    update task: dt
+
+        show '[f]' with dt
+    end t.
+close.

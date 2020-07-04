@@ -1,0 +1,18 @@
+[to Basic]
+
+OtherTest in Bucket :
+
+	bucket open :
+
+		call Test
+		show 'This works too'
+
+	end l.
+
+	Test task :
+
+		show 'Worked'
+
+	end t.
+
+close.

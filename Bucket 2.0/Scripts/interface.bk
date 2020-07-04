@@ -1,0 +1,16 @@
+dad #interface:
+
+    shoud:
+
+        start task:
+        exit task:
+
+        flt deltaTime
+        
+        -- add this line --
+        -- bellow so you --
+        -- to get errors --
+
+        -- str aquatic --
+    close s.
+close.

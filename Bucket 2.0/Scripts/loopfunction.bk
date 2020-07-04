@@ -1,0 +1,23 @@
+[to Bucket]
+
+#loopfunction in Bucket:
+
+    bucket open:
+
+        call func to self.
+    end m.
+
+    func task:
+
+        str bin as sand with 'times: '
+        convert bin to int
+
+        int num as 1
+
+        for bin times if num smaller 128 do:
+
+            show '[i]' with num
+            make num * 2
+        end l. 
+    end t.
+close.

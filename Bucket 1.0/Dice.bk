@@ -1,0 +1,23 @@
+[to Basic]
+
+Dice in Bucket :
+
+	bucket open :
+
+		str Input = sand with 'Your dice : '
+		convert Input in int
+	
+		call Dice
+
+	end l.
+
+	Dice task :
+
+		int Number = 0
+		set Number = random between 1 and Input
+
+		show 'Your dice = [i]' with Number
+
+	end t.
+
+close. 

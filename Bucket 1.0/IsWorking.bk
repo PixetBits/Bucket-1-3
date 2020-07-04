@@ -1,0 +1,24 @@
+[to Basic]
+
+IsWorking in Bucket :
+
+	bucket open :
+
+		str Input = sand with 'name : '
+		str Value = 'Mateus'
+
+		if Input == Value then :
+
+			do : show 'Hello, Sir!'
+
+		finish
+
+		else then :
+
+			do : show 'You´re not Mateus'
+
+		finish
+
+	end l.
+
+close.

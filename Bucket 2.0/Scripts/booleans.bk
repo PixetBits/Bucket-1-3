@@ -1,0 +1,22 @@
+[to Basic]
+
+#booleans in Bucket:
+
+    bucket open:
+
+        bol bout as yes
+
+        str bin as sand with 'put 0 or 1 : '
+        convert bin to bol
+
+        if bin equals bout do:
+
+            > show 'true'
+        end.
+
+        else do:
+
+            > show 'false'
+        end.
+    end m.
+close.

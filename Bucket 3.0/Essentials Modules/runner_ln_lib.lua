@@ -348,13 +348,11 @@ function run(lines, clin, enbd, name, sub)
                 if not line:find(' with ') then sys.error(elin, 's', 'Missing keyword "with".') end
 
                 -- Get variables --
-                fidx, lidx = line:find(' with ', sys.last(line, "'") + 1)
-
-                arg = line:sub(lidx + 1)
+                arg = line:sub(math.max(line:find(' with ')) + 1)
                 arg = arg:gsub(' ', '')
 
                 -- Remove this of line --
-                line = line:gsub(line:sub(fidx), '')
+                line = line:gsub(line:sub(math.min(line:find(' with '))), '')
 
                 -- Split in ',' --
                 if string.find(arg, ',') ~= nil then arg = sys.split(arg, ',') end
@@ -410,7 +408,7 @@ function run(lines, clin, enbd, name, sub)
                  
                 -- Replace once --
                 elseif arg ~= nil then
-
+                    
                     -- Update value --
 
                     -- Num --

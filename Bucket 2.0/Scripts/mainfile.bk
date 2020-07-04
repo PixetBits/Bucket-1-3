@@ -1,0 +1,31 @@
+[to Basic]
+
+dad #interface.
+
+#mainfile in Bucket:
+
+    with #example in Sandbox.
+
+    bucket open:
+        
+        call start to self.
+        show ''
+        call exit to self.
+    end m.
+
+    start task:
+
+        flt deltaTime as 0.16.f
+
+        str name as sand with 'Your name: '
+        show 'Hello, [s]!' with name
+        show ''
+        
+        call update:deltaTime to self.
+    end t.
+
+    exit task:
+
+        show 'Bye!'
+    end t.
+close.

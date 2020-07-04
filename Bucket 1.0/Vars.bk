@@ -1,0 +1,20 @@
+[to Basic]
+
+Vars in Bucket :
+
+	bucket open :
+	
+		str Input = sand with 'your value : '
+		convert Input in int
+		
+		make Input * 2
+		
+		show 'before : [i]' with Input
+		
+		make Input * 2
+		
+		show 'after : [i]' with Input
+		
+	end l.
+
+close.

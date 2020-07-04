@@ -1,0 +1,16 @@
+[to Basic]
+
+#lists in Bucket:
+
+    bucket open:
+
+        lst str list as [0 : 'a', 1 : 'b', 2 : 'c']
+        str var as ''
+
+        str bin as sand with 'Type 0 - 2 : '
+        set var to list bin
+
+        show '[s]' with var
+        show 'Other options : [l]' with [0 : 'a', 1 : 'b', 2 : 'c']
+    end m.
+close.

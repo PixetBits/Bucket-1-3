@@ -1,0 +1,147 @@
+[to Basic]
+[to MathF]
+
+#RPG in Bucket:
+
+    bucket open:
+
+        show 'You wake up.'
+        show ''
+
+		-- Generic index limit --
+		int limit as 0
+
+        -- Your place --
+        lst str place as [0 : 'a forest', 1 : 'a desert', 2 : 'a tundra', 3 : 'the space']
+
+		-- Get limit --
+		siz of place to limit
+
+        -- Get random index --
+        int index as rand[0, limit]
+
+        -- Print current place --
+        str cPlace as ''
+        set cPlace to place index
+        show 'You are lost in [s].' with cPlace
+
+        -- Food --
+
+        lst str food as [0 : 'too much', 1 : 'some', 2 : 'no']
+		
+		-- Get limit --
+		siz of food to limit
+
+        -- Get random index --
+        set index to rand[0, limit]
+        
+        -- Print food --
+        str cFood as ''
+        set cFood to food index
+        show 'You have [s] food.' with cFood
+
+        -- Enemys of forest --
+        if cPlace equals 'a forest' do:
+
+            > lst str animals as [0 : 'tigers', 1 : 'bears', 2 : 'gorilas', 3 : 'snakes']
+        end.
+
+        -- Enemys of desert --
+        maybe cPlace equals 'a desert' do:
+
+            > lst str animals as [0 : 'scorpions', 1 : 'hienas', 2 : 'worms', 3 : 'spiders']
+        end.
+
+        maybe cPlace equals 'a tundra' do:
+
+            > lst str animals as [0 : 'wolfs', 1 : 'foxes', 2 : 'bulls', 3 : 'something big']
+        end.
+		
+		maybe cPlace equals 'the space' do:
+
+            > lst str animals as [0 : 'evil robots', 1 : 'astronalt ghosts', 2 : 'aliens']
+        end.
+		
+		-- Get limit --
+		siz of animals to limit
+
+        -- Get random index --
+        set index to rand[0, limit]
+		
+        -- Print problems --
+        str problems as ''
+        set problems to animals index
+        show 'And you have [s] looking for you.' with problems
+        show ''
+
+        int luck as rand[1, 3]
+        
+    -- Too much food --
+
+        -- 75% --
+        if cFood equals 'too much' and luck equals 3 do:
+            
+            > show 'You survived. You gave part of your food to the [s] and they are your friends now.' with problems
+        end.
+
+        -- 50% --
+        if cFood equals 'too much' and luck equals 2 do:
+            
+            > show 'You survived. You killed the [s] and you still have food.' with problems
+        end.
+
+        -- 25% --
+        if cFood equals 'too much' and luck equals 1 do:
+            
+            > show 'You died after 5 days. The [s] atacked you at night, atracteds by your food.' with problems
+        end.
+    
+    -- Too much food/--
+
+    -- Some food --
+        
+        -- 75% --
+        if cFood equals 'some' and luck equals 3 do:
+            
+            > show 'You survived. You scaped form the [s] and coud get out alive of that place.' with problems
+        end.
+
+        -- 50% --
+        if cFood equals 'some' and luck equals 2 do:
+            
+            > show 'You died after 12 days. The [s] were not a great problem, but your food ended fast.' with problems
+        end.
+
+        -- 25% --
+        if cFood equals 'some' and luck equals 1 do:
+            
+            > show 'You died after 5 days. The [s] atacked you while you were looking for more food.' with problems
+        end.
+    
+    -- Some food/--
+
+    -- No food --
+        
+        -- 75% --
+        if cFood equals 'no' and luck equals 3 do:
+            
+            > show 'You died after one month. You lived in peace eating fruts and living with the [s].' with problems
+        end.
+
+        -- 50% --
+        if cFood equals 'no' and luck equals 2 do:
+            
+            > show 'You died after 12 days. You killed the [s] and ate them, but was not enough.' with problems
+        end.
+
+        -- 25% --
+        if cFood equals 'no' and luck equals 1 do:
+            
+            > show 'You starved after 5 days.'
+        end.
+    
+    -- No food/--
+
+    end m.
+
+close.

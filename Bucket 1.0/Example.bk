@@ -1,0 +1,24 @@
+[to Basic]
+
+Example in Bucket :
+
+	bucket open :
+
+		int x = 2
+		int y = 9
+
+		if x > y then :
+
+			do : show 'X is greater than Y, X = [i]' with x
+
+		finish
+	
+		else then :
+
+			do : show 'Y is greater than X, Y = [i]' with y
+	
+		finish
+
+	end l.
+
+close.

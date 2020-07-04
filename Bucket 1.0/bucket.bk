@@ -1,0 +1,54 @@
+[to Basic]
+
+bucket in Bucket :
+	
+	bucket open :
+		
+		show 'Wellcome to bucket!'
+		
+		str var = sand with 'first arg : '
+		convert var in int
+		
+		str msg = 'operation (+, -, *, /, %, ^) : '
+		str opr = sand with msg
+		
+		str msn = 'second arg : '
+		
+		str val = sand with msn
+		convert val in int
+		
+		if opr == opr then :
+		
+			do : make var + val
+		end.
+		
+		if opr == '-' then :
+		
+			do : make var - val
+		end.
+		
+		if opr == '*' then :
+		
+			do : make var * val
+		end.
+		
+		if opr == '/' then :
+		
+			do : make var / val
+		end.
+		
+		if opr == '%' then :
+		
+			do : make var % val
+		end.
+		
+		if opr == '^' then :
+		
+			do : make var ^ val
+		end.
+		
+		show 'result : [i]' with var
+		
+	end l.
+	
+close.
